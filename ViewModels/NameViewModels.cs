@@ -12,7 +12,7 @@ public partial class NameViewModels : ObservableObject
 {
 
 
-    [ObservableProperty] // damit macht mir das Projekt das selber...
+   [ObservableProperty] // damit macht mir das Projekt das selber...
    string _name=string.Empty;
 
     // die eigenschaft name wird bei der datenbindung verwendet das ViewModel
