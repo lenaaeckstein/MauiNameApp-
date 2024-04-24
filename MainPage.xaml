@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Shell.NavBarIsVisible="False"
+             x:Class="MauiAppName.MainPage">
+
+
+
+    <Grid Margin="10" RowDefinitions="Auto,Auto,Auto,Auto,Auto" RowSpacing="5">
+
+<!--
+        <Label BackgroundColor="LightSalmon" 
+               TextColor="AntiqueWhite" 
+               FontSize="Large" 
+               HorizontalTextAlignment="Start" 
+               VerticalTextAlignment="End"
+               Text="Vorname"/>
+-->
+        <!--Eingabe-->
+        <Label FontAttributes="Bold" FontSize="Subtitle"  TextColor="{StaticResource Primary}" Text="Name" Grid.Row="1"/>
+        <Entry Text="{Binding Name}" Grid.Row="2" />
+
+        <!--Ausgabe-->
+        <Label TextColor="{AppThemeBinding Dark={StaticResource Magenta} ,Light={StaticResource Yellow} }" Text="{Binding Output}" Grid.Row="3" />
+        
+        <!--Button-->
+        <Button Command="{Binding DoCommand}" Text="Vorname ermitteln" Grid.Row="4"  />
+        
+    </Grid>
+
+</ContentPage>
